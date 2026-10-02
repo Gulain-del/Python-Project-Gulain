@@ -1,2 +1,7 @@
 # Python-Project-Gulain
-Personal Project using python 
+- Complete Academic project with python
+# Content
+- Group Project
+- Personal project
+- Notes
+  
