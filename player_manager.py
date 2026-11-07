@@ -20,6 +20,13 @@ def update_player_goals(player,name,goals):
             players["goals"] += goals
             return players
         return "Player not found."
+def remove_player(player,name):
+    name = name.strip().lower()
+    for players in player:
+        if players["name"].lower() == name:
+            player.remove(players)
+            return f"Player {name} removed."
+    return "Player not found."
 for i in range(2):
     data = input("Enter player name, position and goals separated by commas: ").split(",")
     name = data[0].strip()
@@ -39,3 +46,9 @@ if update_player is not None:
     print(f"Player {update_player['name']} updated with {update_player['goals']} goals.")
 else:
     print("Player not found.")
+removed = remove_player(player,"Lamine Yamal")
+if removed:
+    print("Player removed successfully.")
+else:
+    print("Player not found.")
+print(player)
